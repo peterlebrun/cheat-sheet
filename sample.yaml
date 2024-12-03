@@ -1,9 +1,9 @@
 ---
 section1:
   bookmarks:
-    title1: link1
-    title2: link2
-    title3: link3
+    link1: url1
+    link2: url2
+    link3: url3
   command1:
     type: command
     body:
@@ -19,8 +19,8 @@ section1:
       - list item 3
 section2:
   bookmarks:
-    title4: link4
-    title5: link5
+    link4: url4
+    link5: url5
   command2:
     type: command
     body:

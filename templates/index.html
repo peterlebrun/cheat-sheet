@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+      function copyToClipboard(e) {
+          navigator.clipboard.writeText(e.innerText);
+      }
+    </script>
+  </head>
+<body>
+  <div class="content">
+    <div class="nav-outer-container">
+      <div class="nav-inner-container">
+      {% for section in content.keys() %}
+        <a href="#{{section}}">
+          <span class="nav-element">{{ section }}</span>
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+    <div class="sections">
+      {% for title, section in content.items() %}
+        <div class="title-container">
+          <h1 id="{{title}}">{{ title }}</h1>
+          <div class="line"></div>
+        </div>
+        {% if section.bookmarks %}
+          <ul>
+            {% for title, link in section.bookmarks.items() %}
+              <li>
+                <a href="{{link}}">{{title}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% for title, data in section.items() %}
+          {% if title != "bookmarks" %}
+            <h4>{{title}}</h4>
+            <div class="element-container">
+              {% if data.type == "command" %}
+                <div class="element-body" onclick="copyToClipboard(this)">
+                  <ul class="unstyled-list">
+                    {% for li in data.body %}
+                      <li>{{li}}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+              {% if data.type == "list" %}
+                <ul>
+                  {% for li in data.body %}
+                    <li>{{li}}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              {% if data.source %}
+                <div class="element-source">
+                  <a href="{{data.source}}">{{data.source}}</a>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</body>

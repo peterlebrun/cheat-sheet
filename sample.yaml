@@ -1,0 +1,36 @@
+---
+section1:
+  bookmarks:
+    title1: link1
+    title2: link2
+    title3: link3
+  command1:
+    type: command
+    body:
+      - command body line 1
+      - command body line 2
+      - command body line 3
+    source: source-link
+  list1:
+    type: list
+    body:
+      - list item 1
+      - list item 2
+      - list item 3
+section2:
+  bookmarks:
+    title4: link4
+    title5: link5
+  command2:
+    type: command
+    body:
+      - command body line 1
+      - command body line 2
+      - command body line 3
+  list2:
+    type: list
+    body:
+      - list item 1
+      - list item 2
+      - list item 3
+    source: source-link

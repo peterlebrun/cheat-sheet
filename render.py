@@ -1,8 +1,5 @@
 from yaml import safe_load
 from jinja2 import Environment, FileSystemLoader
-import webbrowser
-
-import pprint
 
 env = Environment(loader=FileSystemLoader("templates"))
 index = env.get_template("index.html")

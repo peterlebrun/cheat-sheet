@@ -6,7 +6,6 @@ if [ -d "venv" ]; then
     exit 0
 fi
 
-deactivate
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

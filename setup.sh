@@ -7,8 +7,8 @@ if [ -d "venv" ]; then
 fi
 
 deactivate
-python3.9 -m venv venv
+python -m venv venv
 source venv/bin/activate
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 
 cp sample.yaml content.yaml

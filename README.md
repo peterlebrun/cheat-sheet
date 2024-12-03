@@ -3,10 +3,11 @@
 This project intends to provide a cheat sheet similar to https://d2r.guide
 
 ## Dependencies
-- python3.9
+- python 3 (this has been tested with python >= 3.7; you're on your own with
+  earlier versions)
 
 ## Getting Started
-- Ensure python3.9 is installed
+- Ensure python 3 is installed
 - `git clone git@github.com:peterlebrun/cheat-sheet.git`
 - `cd cheat-sheet`
 - `./setup.sh`

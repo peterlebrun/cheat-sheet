@@ -30,7 +30,7 @@
           <ul>
             {% for title, link in section.bookmarks.items() %}
               <li>
-                <a href="{{link}}">{{title}}</a>
+                <a href="{{link}}" target="_blank">{{title}}</a>
               </li>
             {% endfor %}
           </ul>
@@ -57,7 +57,7 @@
               {% endif %}
               {% if data.source %}
                 <div class="element-source">
-                  <a href="{{data.source}}">{{data.source}}</a>
+                  <a href="{{data.source}}" target="_blank">{{data.source}}</a>
                 </div>
               {% endif %}
             </div>
